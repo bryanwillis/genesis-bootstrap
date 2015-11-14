@@ -2,7 +2,7 @@
 /*
 Plugin Name:        GB3
 Plugin URI:         https://github.com/bryanwillis/genesis-bootstrap/
-Description:        Add Bootstrap to Genesis Theme
+Description:        Add Bootstrap 3 to Genesis Theme
 Version:            1.0.0
 Author:             bryanwillis
 Author URI:         https://github.com/bryanwillis/
