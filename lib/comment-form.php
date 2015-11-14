@@ -33,16 +33,4 @@ function bsg_comment_form_modifications( $args ) {
     return $args;
 }
 
-function bsg_comment_form_modifications_css() {
-?>
-<style type="text/css">
-.comment-form-author,
-.comment-form-email,
-.comment-form-url {
-    width: 50%;
-}
-</style>
-<?php
-}
-add_action('admin_head', 'bsg_comment_form_modifications_css');
 

@@ -1,5 +1,15 @@
 <?php
 
+// Add X-UA-Compatible tag
+add_action( 'genesis_meta', 'bsg_x_ua_compatible' );
+
+function bsg_x_ua_compatible() {
+    ?>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<?php
+}
+
+
 // remove default doctype
 // replace doctype/opening html tag with conditional comments doctype/opening html tag
 remove_action(  'genesis_doctype', 'genesis_do_doctype' );
