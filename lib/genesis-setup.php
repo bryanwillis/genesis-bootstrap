@@ -12,7 +12,7 @@ add_image_size( 'bsg-featured-image', 1170, 630, true );
 // Add .container wrap classes
 add_filter( 'genesis_attr_structural-wrap', 'bsg_attributes_structural_wrap' );
 function bsg_attributes_structural_wrap( $attributes ) {
-    $attributes['class'] = '';
+    $attributes['class'] = 'container';
     return $attributes;
 }
 
@@ -89,3 +89,13 @@ function bsg_be_remove_genesis_page_templates( $page_templates ) {
 }
 add_filter( 'theme_page_templates', 'bsg_be_remove_genesis_page_templates' );
 
+
+
+
+//* Do NOT include the opening php tag shown above. Copy the code shown below.
+//* Disable the superfish script
+add_action( 'wp_enqueue_scripts', 'sp_disable_superfish' );
+function sp_disable_superfish() {
+	wp_deregister_script( 'superfish' );
+	wp_deregister_script( 'superfish-args' );
+}

@@ -2,13 +2,6 @@
 
 
 
-
-
-
-remove_action( 'genesis_after_content_sidebar_wrap', 'genesis_get_sidebar_alt' );
-add_action(    'genesis_after_content', 'genesis_get_sidebar_alt' );
-
-
 // add bootstrap classes
 add_filter( 'genesis_attr_nav-primary',         'bsg_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_nav-secondary',       'bsg_add_markup_class', 10, 2 );
@@ -22,7 +15,6 @@ add_filter( 'genesis_attr_archive-pagination',  'bsg_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_entry-content',       'bsg_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_entry-pagination',    'bsg_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_site-footer',         'bsg_add_markup_class', 10, 2 );
-add_filter( 'genesis_attr_structural-wrap',     'bsg_add_markup_class', 10, 2 );
 
 function bsg_add_markup_class( $attr, $context ) {
     // default classes to add
@@ -40,7 +32,6 @@ function bsg_add_markup_class( $attr, $context ) {
             'archive-pagination'        => 'clearfix',
             'entry-content'             => 'clearfix',
             'entry-pagination'          => 'clearfix bsg-pagination-numeric',
-            'structural-wrap'          => 'container',
 
         ),
         $context,
@@ -129,3 +120,31 @@ function bsg_modify_classes_based_on_template( $classes_to_add, $context, $attr 
 
     return $classes_to_add;
 }
+
+
+
+/* Skip to Main Content - Accessibility Link
+ *
+ */
+
+// add markup for the link
+add_action( 'genesis_before', 'bsg_skip_navigation_add_link', 5 );
+// add id="main-content-container" as target
+add_filter( 'genesis_attr_content', 'bsg_skip_navigation_add_id_for_target' );
+
+
+function bsg_skip_navigation_add_link() {
+    echo '<a class="skip-to-main-content btn btn-large btn-danger" href="#main-content-container" tabindex="1">skip to main content</a>';
+}
+
+function bsg_skip_navigation_add_id_for_target( $attr ) {
+    $attr['id'] = __( 'main-content-container', 'bsg' );
+
+    return $attr;
+}
+
+
+
+
+remove_action( 'genesis_after_content_sidebar_wrap', 'genesis_get_sidebar_alt' );
+add_action(    'genesis_after_content', 'genesis_get_sidebar_alt' );
