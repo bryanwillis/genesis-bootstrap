@@ -11,6 +11,37 @@ License URI:        http://opensource.org/licenses/MIT
 */
 
 
+function gb3_custom_theme_support() {
+
+$bsg_add_theme_support = array(
+                        'bsg-add-head-markup',
+                        'bsg-bootstrap-markup',
+                        'bsg-bootstrap-walker',
+                        'bsg-comment-form',
+                        'bsg-custom-css-js',
+                        'bsg-customizer',
+                        'bsg-footer-creds',
+                        'bsg-genesis-setup',
+                        'bsg-image-display',
+                        'bsg-load-assets',
+                        'bsg-nav',
+                        'bsg-pagination',
+                        'bsg-post-content-nav',
+                        'bsg-search-form',
+                        'bsg-skip-to-main-content',
+                        'bsg-jumbotron',
+                        'bsg-widget-grid-classes',
+
+    );
+    
+    foreach ( $bsg_add_theme_support as $bsg_support ) {
+	           add_theme_support( $bsg_support );
+    } 
+
+}
+
+add_action('after_setup_theme', 'gb3_custom_theme_support');
+
 
 
 function bsg_load_lib_files() {
@@ -27,4 +58,5 @@ add_action('after_setup_theme', 'bsg_load_lib_files', 100);
 
 
 
-     
+
+
