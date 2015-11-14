@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name:        GB3
-Plugin URI:         https://github.com/bryanwillis/genesis-bootstrap/
-Description:        Add Bootstrap 3 to Genesis Theme
+Plugin Name:        Bootstrap Genesis 
+Plugin URI:         https://github.com/bryanwillis/bootstrap-genesis-addons/
+Description:        Add Bootstrap to Genesis Theme via plugin
 Version:            1.0.0
-Author:             bryanwillis
+Author:             bryanwillis 
 Author URI:         https://github.com/bryanwillis/
 License:            MIT License
 License URI:        http://opensource.org/licenses/MIT
@@ -22,9 +22,9 @@ function bsg_load_lib_files() {
     }
   }
 }
-add_action( 'genesis_setup', 'bsg_load_lib_files', 15 );
+add_action('after_setup_theme', 'bsg_load_lib_files', 100);
 
 
 
 
-
+     
