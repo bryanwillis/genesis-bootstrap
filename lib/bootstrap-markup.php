@@ -1,6 +1,10 @@
  <?php
 
 
+
+
+
+
 remove_action( 'genesis_after_content_sidebar_wrap', 'genesis_get_sidebar_alt' );
 add_action(    'genesis_after_content', 'genesis_get_sidebar_alt' );
 
@@ -18,6 +22,7 @@ add_filter( 'genesis_attr_archive-pagination',  'bsg_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_entry-content',       'bsg_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_entry-pagination',    'bsg_add_markup_class', 10, 2 );
 add_filter( 'genesis_attr_site-footer',         'bsg_add_markup_class', 10, 2 );
+add_filter( 'genesis_attr_structural-wrap',     'bsg_add_markup_class', 10, 2 );
 
 function bsg_add_markup_class( $attr, $context ) {
     // default classes to add
@@ -35,6 +40,8 @@ function bsg_add_markup_class( $attr, $context ) {
             'archive-pagination'        => 'clearfix',
             'entry-content'             => 'clearfix',
             'entry-pagination'          => 'clearfix bsg-pagination-numeric',
+            'structural-wrap'          => 'container',
+
         ),
         $context,
         $attr
