@@ -29,9 +29,7 @@ $bsg_add_theme_support = array(
                         'bsg-post-content-nav',
                         'bsg-search-form',
                         'bsg-skip-to-main-content',
-                        'bsg-jumbotron',
-                        'bsg-widget-grid-classes',
-
+                        'bsg-jumbotron'
     );
     
     foreach ( $bsg_add_theme_support as $bsg_support ) {
