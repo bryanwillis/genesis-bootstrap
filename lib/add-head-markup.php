@@ -1,7 +1,6 @@
 <?php
 
 remove_action(  'genesis_doctype', 'genesis_do_doctype' );
-add_action(     'genesis_doctype', 'bsg_conditional_comments' );
 
 function bsg_conditional_comments() {
     ?>
@@ -13,3 +12,4 @@ function bsg_conditional_comments() {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <?php
 }
+add_action(     'genesis_doctype', 'bsg_conditional_comments' );
