@@ -12,7 +12,7 @@ add_image_size( 'bsg-featured-image', 1170, 630, true );
 // Add .container wrap classes
 add_filter( 'genesis_attr_structural-wrap', 'bsg_attributes_structural_wrap' );
 function bsg_attributes_structural_wrap( $attributes ) {
-    $attributes['class'] = 'container';
+    $attributes['class'] = '';
     return $attributes;
 }
 
