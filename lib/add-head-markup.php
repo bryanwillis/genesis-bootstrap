@@ -1,6 +1,5 @@
 <?php
 
-
 remove_action(  'genesis_doctype', 'genesis_do_doctype' );
 add_action(     'genesis_doctype', 'bsg_conditional_comments' );
 
