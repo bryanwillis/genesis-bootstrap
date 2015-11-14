@@ -39,7 +39,6 @@ $bsg_add_theme_support = array(
                         'bsg-bootstrap-markup',
                         'bsg-bootstrap-walker',
                         'bsg-comment-form',
-                        'bsg-custom-css-js',
                         'bsg-customizer',
                         'bsg-footer-creds',
                         'bsg-genesis-setup',
@@ -47,7 +46,6 @@ $bsg_add_theme_support = array(
                         'bsg-load-assets',
                         'bsg-nav',
                         'bsg-pagination',
-                        'bsg-post-content-nav',
                         'bsg-search-form',
                         'bsg-jumbotron',
     );
